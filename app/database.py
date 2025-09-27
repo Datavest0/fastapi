@@ -8,7 +8,8 @@ from .config import settings
 # from psycopg.rows import dict_row
 # import time
 
-SQLALCHEMY_DATABASE_URL = f'postgresql+psycopg://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+SQLALCHEMY_DATABASE_URL = f'postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
